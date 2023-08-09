@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script defer src="app.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-zinc-200 flex justify-center font-mono items-center min-h-screen">
+    <div class="bg-slate-300 grid grid-cols-4 gap-2 first:p-8 shadow-lg rounded-xl border-2 border-black max-w-md md:max-w-lg">
+       
+      <! Display >
+      <div id="output" class="bg-white p-4 rounded-md col-span-4 text-end overflow-auto">0</div>
+      
+      <! Row 1 >
+      <button onClick="display('(')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">(</button>
+      <button onClick="display(')')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">)</button>
+      <button onClick="displayOp('%')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">%</button>
+      <button onClick="clearDisplay()" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">C</button>
+
+      <! Row 2 >
+      <button onClick="display('1')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">1</button>
+      <button onClick="display('2')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">2</button>
+      <button onClick="display('3')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">3</button>
+      <button onClick="displayOp('/')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">÷</button>
+
+      <! Row 3 >
+      <button onClick="display('4')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">4</button>
+      <button onClick="display('5')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">5</button>
+      <button onClick="display('6')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">6</button>
+      <button onClick="displayOp('*')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">×</button>
+
+      <! Row 4 >
+      <button onClick="display('7')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">7</button>
+      <button onClick="display('8')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">8</button>
+      <button onClick="display('9')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">9</button>
+      <button onClick="displayOp('+')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">+</button>
+
+      <! Row 5 >
+      <button onClick="display('.')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">.</button>
+      <button onClick="display('0')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">0</button>
+      <button onClick="calculate()" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">=</button>
+      <button onClick="displayOp('-')" class="bg-white px-5 py-2 rounded-md hover:bg-gray-100">-</button>
+
+
+    </div>
+  </body>
+</html>

@@ -1,3 +1,4 @@
+
 let displayOut = "";
 let result = 0;
 let element = document.getElementById("output");
@@ -28,3 +29,19 @@ function calculate() {
         element.innerHTML = "Error!";
     }
 }
+
+function copyClipboard() {
+    let copyText = document.getElementById("output").innerHTML;
+    let myEl = document.createElement('div');
+
+    navigator.clipboard.writeText(copyText);
+    
+    myEl.className = 'bg-zinc-500 flex justify-center absolute mb-[395px] w-auto h-auto px-2 py-1 text-xs text-white rounded-xl';
+    myEl.innerHTML = 'Copied - ' + displayOut;
+    document.body.appendChild(myEl);
+    console.log("out");
+    setTimeout(function() {
+        myEl.remove();
+      }, 2500);
+  }
+
